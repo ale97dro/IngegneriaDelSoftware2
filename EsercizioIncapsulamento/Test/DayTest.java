@@ -1,3 +1,4 @@
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,8 +15,6 @@ public class DayTest
     {
         day = new Day(9, 10, 2018);
     }
-
-    //UTILITY
 
     @Test
     public void addDaysTest()
@@ -41,14 +40,12 @@ public class DayTest
         assertEquals(day.daysBetween(end), 16);
     }
 
-
     @Test
     public void getDateTest()
     {
         assertEquals(day.getDate(), "9-10-2018");
     }
 
-    //STATIC
     @Test
     public void nowTest()
     {
