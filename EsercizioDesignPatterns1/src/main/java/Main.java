@@ -1,27 +1,22 @@
+import java.io.*;
+import java.net.URISyntaxException;
+import java.util.Iterator;
+
 public class Main {
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException, URISyntaxException
     {
-        MyList<String> stringList = new MyList<>();
+        ClassLoader classLoader = Main.class.getClassLoader();
+        BufferedReader reader = new BufferedReader(new FileReader(new File(classLoader.getResource("file.txt").toURI())));
 
-        stringList.addElement("ciao");
-        stringList.addElement("come");
-        stringList.addElement("va");
+        MyList<String> textRows = new MyList<>();
+        String row;
 
-        MyIterator<String> forwardIterator = stringList.getForwardIterator();
+        while ((row = reader.readLine()) != null)
+            textRows.addElement(row);
 
-        System.out.println(forwardIterator.nextElement()+"\n");
+        MyIterator<String> iterator = textRows.getBackwardIterator();
 
-        stringList.addElement("ciao");
-        forwardIterator.rewind();
-
-        while(forwardIterator.hasMoreElements())
-            System.out.println(forwardIterator.nextElement());
-
-        System.out.println("\n");
-
-        MyIterator<String> backwardIterator = stringList.getBackwardIterator();
-
-        while(backwardIterator.hasMoreElements())
-            System.out.println(backwardIterator.nextElement());
+        while(iterator.hasMoreElements())
+            System.out.println(iterator.nextElement());
     }
 }
