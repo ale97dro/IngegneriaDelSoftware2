@@ -1,3 +1,9 @@
+package mylist;
+
+import iterator.BackwardIterator;
+import iterator.ForwardIterator;
+import iterator.MyIterator;
+
 import java.util.ArrayList;
 import java.util.List;
 

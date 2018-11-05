@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.supsi</groupId>
-    <artifactId>guimvc</artifactId>
+    <artifactId>patterns</artifactId>
     <packaging>jar</packaging>
     <version>1.0</version>
 
@@ -47,6 +47,18 @@
             <groupId>de.saxsys</groupId>
             <artifactId>jfx-testrunner</artifactId>
             <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

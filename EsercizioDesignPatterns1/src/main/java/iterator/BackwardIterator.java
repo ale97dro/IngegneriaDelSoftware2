@@ -1,7 +1,11 @@
+package iterator;
+
+import mylist.MyList;
+
 public class BackwardIterator<T> implements MyIterator<T>
 {
-    private MyList<T> list;
-    private int next;
+    protected MyList<T> list;
+    protected int next;
 
     public BackwardIterator(MyList<T> list)
     {

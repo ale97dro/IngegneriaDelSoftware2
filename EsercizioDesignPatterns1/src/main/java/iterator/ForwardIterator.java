@@ -1,4 +1,6 @@
-import java.util.List;
+package iterator;
+
+import mylist.MyList;
 
 public class ForwardIterator<T> implements MyIterator<T>
 {

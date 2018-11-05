@@ -1,3 +1,5 @@
+package iterator;
+
 public interface MyIterator<T> {
     void rewind();
     T nextElement();

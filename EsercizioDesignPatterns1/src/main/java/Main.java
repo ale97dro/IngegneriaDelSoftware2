@@ -1,6 +1,8 @@
+import iterator.MyIterator;
+import mylist.MyList;
+
 import java.io.*;
 import java.net.URISyntaxException;
-import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) throws IOException, URISyntaxException

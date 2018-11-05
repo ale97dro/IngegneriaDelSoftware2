@@ -1,13 +1,13 @@
-//import org.junit.jupiter.api.BeforeEach;
+package mylist;//import org.junit.jupiter.api.BeforeEach;
 //import org.junit.jupiter.api.Test;
 
+import mylist.MyList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-//import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MyListTest {
 
@@ -53,6 +53,7 @@ public class MyListTest {
     @Test
     public void test02()
     {
-
+        assertNotNull(list.getBackwardIterator());
+        assertNotNull(list.getForwardIterator());
     }
 }
