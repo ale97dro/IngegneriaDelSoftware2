@@ -20,7 +20,7 @@ public class MyListTest {
     }
 
     /**
-     * This test tests the following method:
+     * This printOutput tests the following method:
      *     - addElement
      *     - length
      *     - getElement
@@ -48,7 +48,7 @@ public class MyListTest {
     }
 
     /**
-     * This test tests use of forward iterator
+     * This printOutput tests iterator related method
      */
     @Test
     public void test02()

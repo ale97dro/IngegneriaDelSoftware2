@@ -36,9 +36,7 @@ public class MyList<T>{
         if(pos >= list.size())
             throw new IndexOutOfBoundsException();
 
-        T temp = list.get(pos);
-
-        return temp;
+        return list.get(pos);
     }
 
     public MyIterator<T> getForwardIterator()

@@ -12,8 +12,22 @@ import static org.mockito.Mockito.mock;
 
 public class ForwardIteratorTest
 {
+    private MyList<String> list;
+    private ForwardIterator<String> iterator;
+
+    @BeforeEach
+    public void setup()
+    {
+        list = mock(MyList.class);
+        Mockito.when(list.length()).thenReturn(3);
+
+        for(int i = 0; i < 4; i++)
+            Mockito.when(list.getElement(i)).thenReturn("elmt" + Integer.toString(i));
+
+        iterator = new ForwardIterator<>(list);
+    }
     /**
-     * This test tests the following methods:
+     * This printOutput tests the following methods:
      *      - Constructor
      *      - rewind
      *      - nextElement
@@ -23,12 +37,9 @@ public class ForwardIteratorTest
     public void test01()
     {
         String first_expected = "elmt0";
-        MyList<String> list = mock(MyList.class);
-        Mockito.when(list.length()).thenReturn(3);
-        ForwardIterator<String> iterator = new ForwardIterator<>(list);
 
-        for(int i = 0; i < 4; i++)
-            Mockito.when(list.getElement(i)).thenReturn("elmt" + Integer.toString(i));
+
+
 
         int counter = 0;
         while (iterator.hasMoreElements())
