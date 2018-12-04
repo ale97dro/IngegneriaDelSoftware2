@@ -1,6 +1,9 @@
+package application;
+
 import iterator.MyIterator;
 
 import java.io.PrintStream;
+import java.io.PrintWriter;
 import java.util.List;
 
 public class Printer

@@ -82,7 +82,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ch.supsi.guimvc.Main</mainClass>
+                            <mainClass>ch.supsi.guimvc.application.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
