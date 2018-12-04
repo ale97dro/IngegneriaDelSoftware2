@@ -34,6 +34,6 @@ public class Main
         root.addPerson(p1);
         root.addPerson(p2);
 
-        root.accept(new CompositeOrganizationVisitor());
+        root.accept(new PrintVisitor());
     }
 }

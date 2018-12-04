@@ -1,9 +1,11 @@
 package visitor;
 
-public class CompositeOrganizationVisitor implements Visitor {
+public class PrintVisitor implements Visitor
+{
     @Override
     public void visit(Person p) {
-
+        //p.printEmployee();
+        System.out.println(p.toString());
     }
 
     @Override
@@ -12,9 +14,9 @@ public class CompositeOrganizationVisitor implements Visitor {
         System.out.println(org.getName());
 
         for(Person p : org.getEmployee())
-            p.accept(new PersonVisitor());
+            p.accept(new PrintVisitor());
 
         for(CompositeOrganization o : org.getSubOrganization())
-            o.accept(new CompositeOrganizationVisitor());
+            o.accept(new PrintVisitor());
     }
 }
