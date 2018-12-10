@@ -4,7 +4,6 @@ public class PrintVisitor implements Visitor
 {
     @Override
     public void visit(Person p) {
-        //p.printEmployee();
         System.out.println(p.toString());
     }
 
