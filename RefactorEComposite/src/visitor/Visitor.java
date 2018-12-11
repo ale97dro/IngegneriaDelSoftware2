@@ -2,5 +2,5 @@ package visitor;
 
 public interface Visitor {
     public void visit(Person p);
-    public void visit(CompositeOrganization org);
+    public void visit(Organization org);
 }
