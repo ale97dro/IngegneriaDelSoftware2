@@ -1,0 +1,39 @@
+package composite;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Organization root = new Organization("Root SPA");
+
+        //Dipendenti della root
+        Component p1 = new Person("Mario", "Rossi"); //dipendente di Root SPA
+        Component p2 = new Person("Andrea", "Verdi"); //dipendente di Root SPA
+
+        //Sotto-organizzazioni
+        Organization dip1 = new Organization("Dipartimento 1"); //Dipartimento di Root SPA
+        Organization dip2 = new Organization("Dipartimento 2"); //Dipartimento di Root SPA
+
+        //Dipendenti delle sotto organizzazioni
+        Person p3 = new Person("Davide", "Grigi"); //dipendente di Dipartimento 1
+        Person p4 = new Person("Sergio", "Neri"); //dipendente di Dipartimento 2
+
+        //Sotto-organizzazioni delle sotto-organizzazioni
+        Organization t1 = new Organization("Team 1"); //Team di Dipartimento 1
+
+        //Dipendenti delle sotto-organizzazioni delle sotto-organizzazioni
+        Person p5 = new Person("Daniele", "Gialli"); //dipendente di Team 1
+
+        //Composizione della gerarchia
+        t1.addElement(p5);
+        dip1.addElement(p3);
+        dip1.addElement(t1);
+        dip2.addElement(p4);
+        root.addElement(p1);
+        root.addElement(p2);
+        root.addElement(dip1);
+        root.addElement(dip2);
+
+        root.printElement();
+    }
+}
